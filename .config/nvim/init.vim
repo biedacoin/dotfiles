@@ -33,7 +33,8 @@ fu! s:MakeModeline(...)
     endif
 endfu
 
-autocmd BufNewFile,BufRead *.nix set ts=2 sw=2 et syn=nix | call s:MakeModeline('#')
+autocmd BufNewFile,BufRead *.nix set ts=2 sw=2 et syn=nix      | call s:MakeModeline('#')
+autocmd BufNewFile,BufRead *.sol set ts=4 sw=4 et syn=solidity | call s:MakeModeline('//')
 
 autocmd FileType   python set ts=4 sw=4 et | call s:MakeModeline('#')
 autocmd FileType        c set ts=4 sw=4 et | call s:MakeModeline('//')
