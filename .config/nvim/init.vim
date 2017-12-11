@@ -36,12 +36,13 @@ endfu
 autocmd BufNewFile,BufRead *.nix set ts=2 sw=2 et syn=nix      | call s:MakeModeline('#')
 autocmd BufNewFile,BufRead *.sol set ts=4 sw=4 et syn=solidity | call s:MakeModeline('//')
 
-autocmd FileType   python set ts=4 sw=4 et | call s:MakeModeline('#')
-autocmd FileType        c set ts=4 sw=4 et | call s:MakeModeline('//')
-autocmd FileType      yml set ts=2 sw=2 et | call s:MakeModeline('#')
-autocmd FileType       sh set ts=4 sw=4 et | call s:MakeModeline('#')
-autocmd FileType markdown set ts=2 sw=2 et | call s:MakeModeline('[//]: # (', ')')
-autocmd FileType     json set ts=2 sw=2 et
+autocmd FileType     python set ts=4 sw=4 et | call s:MakeModeline('#')
+autocmd FileType          c set ts=4 sw=4 et | call s:MakeModeline('//')
+autocmd FileType        yml set ts=2 sw=2 et | call s:MakeModeline('#')
+autocmd FileType         sh set ts=4 sw=4 et | call s:MakeModeline('#')
+autocmd FileType   markdown set ts=2 sw=2 et | call s:MakeModeline('[//]: # (', ')')
+autocmd FileType javascript set ts=4 sw=4 et | call s:MakeModeline('//')
+autocmd FileType       json set ts=2 sw=2 et
 
 command ML execute
     \ '$s@$@\r' . (exists('b:effective_modeline') ? b:effective_modeline : g:default_modeline) . '@|noh|write!|edit'
