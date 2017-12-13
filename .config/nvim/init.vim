@@ -41,8 +41,8 @@ autocmd FileType          c set ts=4 sw=4 et | call s:MakeModeline('//')
 autocmd FileType       yaml set ts=2 sw=2 et | call s:MakeModeline('#')
 autocmd FileType         sh set ts=4 sw=4 et | call s:MakeModeline('#')
 autocmd FileType   markdown set ts=2 sw=2 et | call s:MakeModeline('[//]: # (', ')')
-autocmd FileType javascript set ts=4 sw=4 et | call s:MakeModeline('//')
 autocmd FileType dockerfile set ts=2 sw=2 et | call s:MakeModeline('#')
+autocmd FileType javascript set ts=2 sw=2 et | call s:MakeModeline('//')
 autocmd FileType       json set ts=2 sw=2 et
 
 command ML execute
