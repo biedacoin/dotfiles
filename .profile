@@ -5,6 +5,8 @@ export LANG='en_US.UTF-8'
 
 export EDITOR='nvim'
 
+export PATH="$HOME/.local/bin:$PATH"
+
 if [ -e "$HOME/.bashrc" ]; then
     source "$HOME/.bashrc"
 fi
