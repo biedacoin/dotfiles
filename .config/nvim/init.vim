@@ -33,9 +33,12 @@ fu! s:MakeModeline(...)
     endif
 endfu
 
-autocmd BufNewFile,BufRead *.nix set ts=2 sw=2 et syn=nix      | call s:MakeModeline('#')
-autocmd BufNewFile,BufRead *.sol set ts=4 sw=4 et syn=solidity | call s:MakeModeline('//')
+autocmd BufNewFile,BufRead *.nix      set filetype=nix
+autocmd BufNewFile,BufRead *.sol      set filetype=solidity
+autocmd BufNewFile,BufRead *.ts,*.tsx set filetype=typescript
 
+autocmd FileType        nix set ts=2 sw=2 et | call s:MakeModeline('#')
+autocmd FileType   solidity set ts=4 sw=4 et | call s:MakeModeline('//')
 autocmd FileType     python set ts=4 sw=4 et | call s:MakeModeline('#')
 autocmd FileType          c set ts=4 sw=4 et | call s:MakeModeline('//')
 autocmd FileType       yaml set ts=2 sw=2 et | call s:MakeModeline('#')
@@ -43,6 +46,7 @@ autocmd FileType         sh set ts=4 sw=4 et | call s:MakeModeline('#')
 autocmd FileType   markdown set ts=2 sw=2 et | call s:MakeModeline('[//]: # (', ')')
 autocmd FileType dockerfile set ts=2 sw=2 et | call s:MakeModeline('#')
 autocmd FileType javascript set ts=2 sw=2 et | call s:MakeModeline('//')
+autocmd FileType typescript set ts=2 sw=2 et | call s:MakeModeline('//')
 autocmd FileType       json set ts=2 sw=2 et
 
 command ML execute
