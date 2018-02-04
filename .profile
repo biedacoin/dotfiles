@@ -5,7 +5,9 @@ export LANG='en_US.UTF-8'
 
 export EDITOR='nvim'
 
-export PATH="$HOME/.yarn/bin:$PATH"
+export GOPATH="$HOME/go"
+
+export PATH="$GOPATH/bin:$HOME/.yarn/bin:$PATH"
 
 if [ -e "$HOME/.bashrc" ]; then
     source "$HOME/.bashrc"
