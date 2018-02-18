@@ -1,3 +1,5 @@
 [user]
-	name = biedacoin
+	name = Michal Opala
 	email = biedacoin@gmail.com
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
